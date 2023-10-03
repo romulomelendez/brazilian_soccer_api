@@ -20,4 +20,12 @@ public class ClubController {
     public String getClub(@PathVariable String clubName) {
         return clubName;
     }
+
+    @PostMapping("/create/club")
+    public Club createClub(@RequestBody Club clubData) {
+
+        Club club = new Club();
+
+        return club;
+    }
 }

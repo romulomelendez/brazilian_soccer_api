@@ -1,17 +1,29 @@
 package com.example.project.api.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+@Table(name = "club")
 public class Club {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
-	private String foundedIn;
+	private Integer foundedIn;
 	private String countryState;
+
 
     // Getters
     public String getName() {
         return this.name;
     }
 
-    public String getFoundedIn() {
+    public Integer getFoundedIn() {
         return this.foundedIn;
     }
 
@@ -24,7 +36,7 @@ public class Club {
         this.name = name;
     }
     
-    public void setFoundedIn(String foundedIn) {
+    public void setFoundedIn(Integer foundedIn) {
         this.foundedIn = foundedIn;
     }
 
