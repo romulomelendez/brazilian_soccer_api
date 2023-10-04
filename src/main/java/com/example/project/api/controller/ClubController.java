@@ -17,8 +17,8 @@ public class ClubController {
     private ClubRepository repo;
     
     @GetMapping("/clubs")
-    public String getAllClubs() {
-        return "Hello World!";
+    public Iterable<Club> getAllClubs() {
+        return repo.findAll();
     }
 
     @GetMapping("/clubs/{clubName}")
