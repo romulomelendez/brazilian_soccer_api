@@ -22,8 +22,8 @@ public class ClubController {
     }
 
     @GetMapping("/clubs/{clubName}")
-    public String getClub(@PathVariable String clubName) {
-        return clubName;
+    public Club getClub(@PathVariable String clubName) {
+        return repo.findByName(clubName);
     }
 
     @PostMapping("/create/club")

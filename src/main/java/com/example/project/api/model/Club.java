@@ -13,10 +13,10 @@ public class Club {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
 	private Integer foundedIn;
 	private String countryState;
-
 
     // Getters
     public String getName() {
@@ -31,7 +31,15 @@ public class Club {
         return this.countryState;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
     //Setters
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
