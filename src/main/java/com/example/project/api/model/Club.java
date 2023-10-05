@@ -1,5 +1,6 @@
 package com.example.project.api.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
@@ -14,8 +15,13 @@ public class Club {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(length = 30, nullable = false)
     private String name;
+    
+    @Column(nullable = false)
 	private Integer foundedIn;
+
+    @Column(nullable = false)
 	private String countryState;
 
     // Getters
