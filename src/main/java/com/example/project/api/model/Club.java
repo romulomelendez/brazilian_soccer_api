@@ -15,14 +15,14 @@ public class Club {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length = 30, nullable = false)
+    @Column(name = "name", length = 30, nullable = false)
     private String name;
     
-    @Column(nullable = false)
+    @Column(name = "founded_in", length = 5, nullable = false)
 	private Integer foundedIn;
 
-    @Column(nullable = false)
-	private String countryState;
+    @Column(name = "country", length = 20, nullable = false)
+	private String country;
 
     // Getters
     public String getName() {
@@ -33,8 +33,8 @@ public class Club {
         return this.foundedIn;
     }
 
-    public String getCountryState() {
-        return this.countryState;
+    public String getCountry() {
+        return this.country;
     }
 
     public Integer getId() {
@@ -54,8 +54,8 @@ public class Club {
         this.foundedIn = foundedIn;
     }
 
-    public void setCountryState(String countryState) {
-        this.countryState = countryState;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
 }
