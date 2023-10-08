@@ -24,7 +24,17 @@ public class Club {
     @Column(name = "country", length = 20, nullable = false)
 	private String country;
 
+    @Column(name = "club_idol", length = 15, nullable = false)
+    private String clubIdol;
+    
+    @Column(name = "stadium", length = 25, nullable = false)
+    private String stadium; 
+
     // Getters
+    public Integer getId() {
+        return id;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -37,8 +47,12 @@ public class Club {
         return this.country;
     }
 
-    public Integer getId() {
-        return id;
+    public String getClubIdol() {
+        return clubIdol;
+    }
+
+    public String getStadium() {
+        return stadium;
     }
 
     //Setters
@@ -56,6 +70,14 @@ public class Club {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public void setClubIdol(String clubIdol) {
+        this.clubIdol = clubIdol;
+    }
+
+    public void setStadium(String stadium) {
+        this.stadium = stadium;
     }
 
 }
