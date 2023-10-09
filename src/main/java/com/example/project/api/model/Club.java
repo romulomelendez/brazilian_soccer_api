@@ -1,11 +1,15 @@
 package com.example.project.api.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 
 @Entity
 @Table(name = "club")
@@ -28,7 +32,12 @@ public class Club {
     private String clubIdol;
     
     @Column(name = "stadium", length = 25, nullable = false)
-    private String stadium; 
+    private String stadium;
+
+    @OneToMany
+    @JoinColumn(name = "club_title_id", nullable = true)
+    private List<Title> title;
+
 
     // Getters
     public Integer getId() {

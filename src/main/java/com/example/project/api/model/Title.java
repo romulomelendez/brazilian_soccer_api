@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
@@ -24,6 +26,9 @@ public class Title {
     @Column(name = "description", length = 150, nullable = true)
     private String description;
     
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    private Club club;
 
     public Integer getId() {
         return id;
