@@ -7,8 +7,8 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 12345
-      MYSQL_DATABASE: club_api_spring
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
     ports:
       - '3306:3306'
     expose:
@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: api.dockerfile
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/club_api_spring
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/${DB_NAME}
     ports:
       - '8080:8080'
     depends_on:
