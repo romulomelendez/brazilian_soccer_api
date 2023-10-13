@@ -33,7 +33,7 @@ public class ClubController {
     }
 
     @PutMapping("/clubs/update")
-    public Club updateClub(@RequestBody Club newClubData) {
-        return repo.save(newClubData);
+    public Club updateClub(@RequestBody Club clubToUpdate) {
+        return repo.save(clubToUpdate);
     }
 }
