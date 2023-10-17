@@ -10,7 +10,7 @@ import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "title")
+@Table(name = "titles")
 public class Title {
     
     @Id

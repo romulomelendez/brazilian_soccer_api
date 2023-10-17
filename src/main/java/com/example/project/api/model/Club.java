@@ -12,7 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 
 @Entity
-@Table(name = "club")
+@Table(name = "clubs")
 public class Club {
 
     @Id
